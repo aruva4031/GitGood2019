@@ -12,5 +12,9 @@ public class plum : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 300);
+
+		if (gameObject.name.Contains("(Clone)")){
+				Object.Destroy(this.gameObject, 2.0f);
+		}
 	}
 }
